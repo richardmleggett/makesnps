@@ -1,0 +1,15 @@
+makesnps takes a reference genome and outputs a copy with a specified number of SNPs in it, separated by a minimum distance.
+
+It was used to create test data for bubbleparse (https://github.com/richardmleggett/bubbleparse) along with SimSeq (https://github.com/jstjohn/SimSeq) which was used for creating simulated reads.
+
+To compile makesnps, just type:
+cc -o makesnps makesnps.c
+
+Syntax: makesnps [-i filename] [-o filename] [-c filename] [options]
+where [-i filename] specifies the name of a reference genome in FASTA format.
+      [-o filename] specifies the name of an output FASTA file.
+      [-c filename] specifies the name of a CSV file to output containing SNP positions.
+      [-s id] specifies the output sequence id (default 'makesnps').
+      [-n int] specifies the number of SNPs to insert (default 1000).
+      [-m int] specifies the minimum distance between SNPs (default 100).
+      [-w int] specifies the column width of the output file (default 70).
